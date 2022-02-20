@@ -6,7 +6,7 @@ app = Flask(__name__)
 def query_example():
     return 'Query String Example'
 
-@app.route("/result", methods = ["GET"])
+@app.route("/result", methods = ["POST"])
 def result():
     print(requests.files)
     data = request.files['audio_data'].read()
