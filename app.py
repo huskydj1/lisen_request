@@ -8,11 +8,9 @@ def query_example():
 
 @app.route("/result", methods = ["POST"])
 def result():
-    print(requests.files)
+    print(request.files)
     data = request.files['audio_data'].read()
     print(data)
-
-
     
     return 'https://avatars.dicebear.com/api/bottts/:seed.svg'
 
@@ -20,3 +18,6 @@ if __name__ == '__main__':
     # run app in debug mode on port 5000
     # app.run(debug=True, port=5000)
     app.run(host='0.0.0.0', port=80)
+
+    
+    
